@@ -40,4 +40,4 @@ dependencies:
 
 - name: github-runner
   version: 0.1.0
-  repository: https://actions-runner.github.io/chart
+  repository: https://actions-runner-controller.github.io/actions-runner-controller
