@@ -50,6 +50,8 @@ argo-workflows:
   server:
     ingress:
       enabled: true
+      annotations:
+        kubernetes.io/ingress.class: nginx
       hosts:
         - argo-workflows.santieich.com
     service:
