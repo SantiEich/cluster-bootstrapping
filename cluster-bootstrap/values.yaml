@@ -9,6 +9,8 @@ env_short: google
 min_replicas: 2
 max_replicas: 10
 
+github_token: <your github token>
+
 argo-workflows:
   hosts:
     - argo-workflows.santieich.com

@@ -34,3 +34,12 @@ spec:
           memory: 2Gi
       labels:
         - runner-{{.Values.env_short}}
+---
+apiVersion: v1
+data:
+  github_token: {{ .Values.github_token}}
+kind: Secret
+metadata:
+  name: controller-manager
+  namespace: {{ .Values.namespace}
+type: Opaque
