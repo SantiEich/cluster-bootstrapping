@@ -41,5 +41,5 @@ data:
 kind: Secret
 metadata:
   name: controller-manager
-  namespace: {{ .Values.namespace}
+  namespace: {{ .Values.namespace}}
 type: Opaque
