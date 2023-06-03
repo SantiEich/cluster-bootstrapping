@@ -57,8 +57,7 @@ argo-workflows:
         - argo-workflows.santieich.com
     service:
       type: ClusterIP
-      port: 80
-
+      
 cert-manager:
   installCRDs: true
 
