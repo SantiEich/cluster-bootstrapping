@@ -60,5 +60,6 @@ argo-workflows:
 cert-manager:
   installCRDs: true
 
-github-runner:
+actions-runner-controller:
+  fullnameOverride: actions-runner-controller
   syncPeriod: 1m
