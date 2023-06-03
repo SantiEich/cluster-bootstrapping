@@ -47,16 +47,17 @@ affinity: {}
 argo-workflows:
   hosts:
     - argo-workflows.santieich.com
-  ingress:
-    enabled: true
-    annotations: {}
-    path: /
-    tls: []
-    hosts:
-      - argo-workflows.santieich.com
-  service:
-    type: ClusterIP
-    port: 80
+  server:
+    ingress:
+      enabled: true
+      annotations: {}
+      path: /
+      tls: []
+      hosts:
+        - argo-workflows.santieich.com
+    service:
+      type: ClusterIP
+      port: 80
 
 cert-manager:
   installCRDs: true
