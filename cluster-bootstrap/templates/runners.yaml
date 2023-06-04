@@ -24,7 +24,7 @@ spec:
   template:
     spec:
       organization: strikesecurity
-      ephemeral: true
+      ephemeral: false
       resources:
         limits:
           cpu: 4
