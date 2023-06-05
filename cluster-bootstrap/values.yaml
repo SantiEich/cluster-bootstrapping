@@ -32,6 +32,7 @@ actions-runner-controller:
   syncPeriod: 1m
 
 chartmuseum:
+  
   ingress:
     enabled: true
     hosts:
