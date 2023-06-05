@@ -50,5 +50,5 @@ chartmuseum:
       STORAGE_AMAZON_PREFIX:
       STORAGE_AMAZON_REGION: us-east-1
     secret:
-      AWS_ACCESS_KEY_ID: <your aws access key id> ## aws access key id value
-      AWS_SECRET_ACCESS_KEY: <your aws access key secret> ## aws access key secret value
+      AWS_ACCESS_KEY_ID: "AKIAAAAAAAAAAAAAAAA" # AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" # AWS_SECRET_ACCESS_KEY
