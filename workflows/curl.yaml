@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  name: curl-workflow-test2
+spec:
+  entrypoint: curl-steps
+  templates:
+  - name: curl-steps
+    steps:
+    - - name: curl-command
+        template: run-curl
+        arguments:
+          parameters:
+          - name: pod-number
+            value: "{{item}}"
+        withSequence:
+          start: 1
+          end: 30
+
+  - name: run-curl
+    inputs:
+      parameters:
+      - name: pod-number
+    container:
+      image: curlimages/curl
+      command: [sh, -c]
+      args: ["curl -s https://santieich.free.beeceptor.com"]
