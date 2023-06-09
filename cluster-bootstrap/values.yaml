@@ -12,6 +12,7 @@ max_replicas: 10
 github_token: <your github token>
 
 argo-workflows:
+  enabled: true
   hosts:
     - argo-workflows.santieich.com
   server:
@@ -23,16 +24,21 @@ argo-workflows:
         - argo-workflows.santieich.com
     service:
       type: ClusterIP
+    artifactRepository:
+      s3:
+
       
 cert-manager:
+  enabled: true
   installCRDs: true
 
 actions-runner-controller:
+  enabled: true
   fullnameOverride: actions-runner-controller
   syncPeriod: 1m
 
 chartmuseum:
-  
+  enabled: true
   ingress:
     enabled: true
     hosts:
