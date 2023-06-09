@@ -42,7 +42,7 @@ dependencies:
   repository: https://actions-runner-controller.github.io/actions-runner-controller
   condition: actions-runner-controller.enabled
 
-- name: chartmuseum
-  version: 3.9.0
-  repository: https://chartmuseum.github.io/charts
-  condition: chartmuseum.enabled
+# - name: chartmuseum
+#   version: 3.9.0
+#   repository: https://chartmuseum.github.io/charts
+#   condition: chartmuseum.enabled
