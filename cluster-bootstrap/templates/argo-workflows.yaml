@@ -17,7 +17,7 @@ spec:
     targetRevision: 0.28.2
     helm:
       valueFiles:
-      - argo-workflows.yaml
+      - values/argo-workflows.yaml
   syncPolicy:
     automated:
       prune: true

@@ -1,0 +1,12 @@
+enabled: true
+hosts:
+  - argo-workflows.santieich.com
+server:
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx
+    hosts:
+      - argo-workflows.santieich.com
+  service:
+    type: ClusterIP
