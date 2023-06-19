@@ -12,36 +12,41 @@ max_replicas: 10
 github:
   token: dG9rZW4K
   runners:
+    - name: extra-small
+      short_name: xs
+      min_replicas: 0
+      max_replicas: 10
+      resources:
+        cpu: 500m
+        memory: 512Mi
     - name: small
       short_name: s
-      min_replicas: 2
+      min_replicas: 0
       max_replicas: 10
       resources:
         cpu: 0.5
         memory: 1Gi
     - name: medium
       short_name: m
-      min_replicas: 2
+      min_replicas: 0
       max_replicas: 10
       resources:
         cpu: 1
         memory: 2Gi
     - name: large
       short_name: l
-      min_replicas: 2
+      min_replicas: 0
       max_replicas: 10
       resources:
         cpu: 2
         memory: 4Gi
     - name: xlarge
       short_name: xl
-      min_replicas: 2
+      min_replicas: 0
       max_replicas: 10
       resources:
         cpu: 4
         memory: 8Gi
-
-github_token: dG9rZW4K
 
 argo-workflows:
   enabled: true
