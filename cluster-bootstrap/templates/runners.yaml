@@ -39,7 +39,7 @@ spec:
 ---
 apiVersion: v1
 data:
-  github_token: {{ .Values.github.token | b64encode }}
+  github_token: {{ .Values.github.token }}
 kind: Secret
 metadata:
   name: controller-manager
