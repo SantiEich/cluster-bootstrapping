@@ -7,7 +7,7 @@ namespace: default
 env_short: google
 
 min_replicas: 2
-max_replicas: 10
+max_replicas: 4
 
 github:
   token: dG9rZW4K
