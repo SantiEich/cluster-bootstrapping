@@ -1,15 +1,15 @@
-
 # Normal R nner
+{{- range .Values.github.runners }}
 apiVersion: actions.summerwind.dev/v1alpha1
 kind: HorizontalRunnerAutoscaler
 metadata:
-  name: horizontal-runner-autoscaler-{{ .Values.env_short}}
-  namespace: {{ .Values.namespace}}
+  name: horizontal-runner-autoscaler-{{ .short_name }}
+  namespace: {{ $.Values.namespace }}
 spec:
   scaleTargetRef:
-    name: github-runner-{{ .Values.env_short}}
-  minReplicas: {{ .Values.min_replicas}}
-  maxReplicas: {{ .Values.max_replicas}}
+    name: github-runner-{{ .short_name }}
+  minReplicas: {{ .min_replicas }}
+  maxReplicas: {{ .max_replicas }}
   metrics:
   - type: PercentageRunnersBusy
     scaleUpThreshold: '0.75'    # The percentage of busy runners at which the number of desired runners are re-evaluated to scale up
@@ -20,8 +20,8 @@ spec:
 apiVersion: actions.summerwind.dev/v1alpha1
 kind: RunnerDeployment
 metadata:
-  name: github-runner-{{ .Values.env_short}}
-  namespace: {{.Values.namespace}}
+  name: github-runner-{{ .short_name }}
+  namespace: {{ $.Values.namespace }}
 spec:
   template:
     spec:
@@ -29,19 +29,11 @@ spec:
       ephemeral: false
       resources:
         limits:
-          cpu: 4
-          memory: 4Gi
+          cpu: {{ .resources.cpu }}
+          memory: {{ .resources.memory }}
         requests:
-          cpu: 2
-          memory: 2Gi
+          cpu: {{ divide .resources.cpu 2 }}
+          memory: {{ divide .resources.memory 2 }}
       labels:
-        - runner-{{.Values.env_short}}
----
-apiVersion: v1
-data:
-  github_token: {{ .Values.github.token | b64encode }}
-kind: Secret
-metadata:
-  name: controller-manager
-  namespace: {{ .Values.namespace}}
-type: Opaque
+        - runner-{{ .short_name }}
+{{- end }}
