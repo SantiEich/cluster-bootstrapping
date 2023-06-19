@@ -32,8 +32,8 @@ spec:
           cpu: {{ .resources.cpu }}
           memory: {{ .resources.memory }}
         requests:
-          cpu: {{ divide .resources.cpu 2 }}
-          memory: {{ divide .resources.memory 2 }}
+          cpu: {{ .resources.cpu }}
+          memory: {{ .resources.memory}}
       labels:
         - runner-{{ .short_name }}
 {{- end }}
