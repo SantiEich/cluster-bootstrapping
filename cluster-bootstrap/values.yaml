@@ -10,7 +10,7 @@ min_replicas: 2
 max_replicas: 10
 
 github:
-  token: <your github token>
+  token: dG9rZW4K
   runners:
     - name: small
       short_name: s
@@ -41,7 +41,7 @@ github:
         cpu: 4
         memory: 8Gi
 
-github_token: <your github token>
+github_token: dG9rZW4K
 
 argo-workflows:
   enabled: true
