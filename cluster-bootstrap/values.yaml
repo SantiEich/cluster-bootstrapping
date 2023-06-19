@@ -19,27 +19,27 @@ github:
       resources:
         cpu: 500m
         memory: 512Mi
-    # - name: small
-    #   short_name: s
-    #   min_replicas: 1
-    #   max_replicas: 10
-    #   resources:
-    #     cpu: 0.5
-    #     memory: 1Gi
-    # - name: medium
-    #   short_name: m
-    #   min_replicas: 1
-    #   max_replicas: 10
-    #   resources:
-    #     cpu: 1
-    #     memory: 2Gi
-    # - name: large
-    #   short_name: l
-    #   min_replicas: 1
-    #   max_replicas: 10
-    #   resources:
-    #     cpu: 2
-    #     memory: 4Gi
+    - name: small
+      short_name: s
+      min_replicas: 1
+      max_replicas: 10
+      resources:
+        cpu: 0.5
+        memory: 1Gi
+    - name: medium
+      short_name: m
+      min_replicas: 1
+      max_replicas: 10
+      resources:
+        cpu: 1
+        memory: 2Gi
+    - name: large
+      short_name: l
+      min_replicas: 1
+      max_replicas: 10
+      resources:
+        cpu: 2
+        memory: 4Gi
     # - name: xlarge
     #   short_name: xl
     #   min_replicas: 1
