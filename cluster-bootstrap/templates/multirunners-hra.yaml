@@ -6,7 +6,7 @@ metadata:
   namespace: {{ $.Values.namespace }}
 spec:
   scaleTargetRef:
-    name: github-runner-{{ .short_name }}
+    name: runner-{{ .short_name }}
   minReplicas: {{ .min_replicas }}
   maxReplicas: {{ .max_replicas }}
   metrics:

@@ -21,7 +21,7 @@ version: 0.1.1
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 appVersion: "1.0"
-# dependencies:
+dependencies:
 # - name: argo-workflows
 #   version: 0.28.2
 #   repository: https://argoproj.github.io/argo-helm
@@ -37,10 +37,10 @@ appVersion: "1.0"
 #   repository: https://charts.jetstack.io
 #   condition: cert-manager.enabled
 
-# - name: actions-runner-controller
-#   version: 0.23.3
-#   repository: https://actions-runner-controller.github.io/actions-runner-controller
-#   condition: actions-runner-controller.enabled
+- name: actions-runner-controller
+  version: 0.23.3
+  repository: https://actions-runner-controller.github.io/actions-runner-controller
+  condition: actions-runner-controller.enabled
 
 # - name: chartmuseum
 #   version: 3.9.0
