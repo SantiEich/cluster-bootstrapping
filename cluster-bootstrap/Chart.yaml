@@ -32,10 +32,10 @@ dependencies:
 #   repository: https://argoproj.github.io/argo-helm
 #   condition: argo-rollouts.enabled
 
-# - name: cert-manager
-#   version: 1.7.1
-#   repository: https://charts.jetstack.io
-#   condition: cert-manager.enabled
+- name: cert-manager
+  version: 1.7.1
+  repository: https://charts.jetstack.io
+  condition: cert-manager.enabled
 
 - name: actions-runner-controller
   version: 0.23.3

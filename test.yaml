@@ -1,0 +1,21 @@
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  labels:
+    argocd.argoproj.io/instance: cluster-bootstrap
+  name: github-runner-google
+  namespace: default
+spec:
+  template:
+    spec:
+      ephemeral: false
+      labels:
+        - runner-google
+      organization: strikesecurity
+      resources:
+        limits:
+          cpu: 4
+          memory: 4Gi
+        requests:
+          cpu: 2
+          memory: 2Gi
