@@ -9,6 +9,8 @@ env_short: google
 min_replicas: 2
 max_replicas: 4
 
+github_token: dG9rZW4K
+
 github:
   token: dG9rZW4K
   runners:
