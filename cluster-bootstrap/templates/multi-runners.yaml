@@ -1,21 +1,21 @@
-# {{- range .Values.github.runners }}
-# apiVersion: actions.summerwind.dev/v1alpha1
-# kind: RunnerDeployment
-# metadata:
-#   name: runner-{{ .short_name }}
-#   namespace: {{ $.Values.namespace }}
-# spec:
-#   template:
-#     spec:
-#       organization: strikesecurity
-#       ephemeral: false
-#       resources:
-#         limits:
-#           cpu: {{ .resources.cpu }}
-#           memory: {{ .resources.memory }}
-#         requests:
-#           cpu: {{ .resources.cpu }}
-#           memory: {{ .resources.memory}}
-#       labels:
-#         - runner-{{ .short_name }}
-# {{- end }}
+{{- range .Values.github.runners }}
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: runner-{{ .short_name }}
+  namespace: {{ $.Values.namespace }}
+spec:
+  template:
+    spec:
+      organization: strikesecurity
+      ephemeral: false
+      resources:
+        limits:
+          cpu: {{ .resources.cpu }}
+          memory: {{ .resources.memory }}
+        requests:
+          cpu: {{ .resources.cpu }}
+          memory: {{ .resources.memory}}
+      labels:
+        - runner-{{ .short_name }}
+{{- end }}
